@@ -5,5 +5,6 @@ public class Main {
         Parot parot = new Parot();
         parot.setName("Kesha");
         System.out.println(parot.getName());
+        System.out.println("Hello World");
     }
 }
