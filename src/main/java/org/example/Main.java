@@ -1,10 +1,12 @@
 package org.example;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-        Parot parot = new Parot();
-        parot.setName("Kesha");
-        System.out.println(parot.getName());
-        System.out.println("Hello World");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Car.class);
+        Person person = context.getBean(Person.class);
+        person.setName("Alice");
+        System.out.println(person.getName());
     }
 }
